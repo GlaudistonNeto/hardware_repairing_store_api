@@ -1,26 +1,26 @@
 {
-  "name": "hardware-repairing-store-api",
-  "version": "0.0.0",
-  "private": false,
+  "name": "hardware_repairing_store_api",
+  "version": "1.0.0",
+  "description": "An API for a hardware repairing store which provide services that users can buy",
+  "main": "server.js",
+  "repository": "https://github.com/GlaudistonNeto/hardware_repairing_store_api",
+  "author": "glaudistontheonly",
+  "license": "MIT",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon app.js"
+    "dev": "nodemon src/server.js"
+  },
+  "private": false,
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.3.1",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
+    "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
-    "morgan": "~1.9.1",
-    "mysql2": "^3.5.1",
-    "sequelize": "^6.32.1",
-    "sequelize-cli": "^6.6.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
+    "knex": "^2.5.1",
+    "mysql2": "^3.5.2",
+    "sequelize": "^6.32.1"
   }
 }
