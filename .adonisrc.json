@@ -1,16 +1,5 @@
 {
   "typescript": true,
-  "metaFiles": [
-    ".env",
-    ".adonisrc.json",
-    {
-    "pattern": "public/",
-    "reloadServer": false
-    },
-    {
-    "pattern": "resources/views//*.edge",
-    "reloadServer": false
-    }],
   "commands": [
     "./commands",
     "@adonisjs/core/build/commands/index.js",
