@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "heroku-postbuild": "yarn add @adonisjs/assembler@^5.9.5",
     "dev": "node ace serve --watch",
     "build": "node ace build --prod",
     "start": "ENV_SILENT=true node server.js",
