@@ -1,108 +1,69 @@
-an api-restful, using the very basics concepts of an API to store services in a list with name and price.
-
-ENDPOINTS
-GET /services
-This endpoint is possible to return the list of all services stored in the “database”.
-
-Parameters
-None
-
-Responses
-OK! 200
-In case this response happens, you will receive the listing of all services
-
-Response example:
-
-[
-   {
-   	"id": 1,
-   	"name": "serv1",
-   	"price": 0.01
-   },
-   {
-   	"id": 2,
-   	"name": "serv2",
-   	"price": 0.02
-   },
-   {
-   	"id": 3,
-   	"name": "serv3",
-   	"price": 0.03
-   }
-]
-GET /sertvices/:id
-This endpoint is possible to return the list of all services stored in the “database”.
-
-Parameters
-Service id registered in the system.
-
-Responses
-OK! 200
-In case this response happens you will receive the listing of all services.
-
-Response example:
-
-[
 {
-   	"id": 3,
-   	"name": "serv3"
-   }
-]
-
-Not Found 404
-In case the id of the product doesn't exist you will receive the error message Not Found with the error code 404.
-
-Response Example:
-
-Not Found
-
-POST /orders
-This endpoint is responsible to register the orders in the “database”.
-
-Parameters
-None
-
-Responses
-OK! 200
-In case this response happens, you will receive the listing of all orders
-
-DELETE /order/:id
-This endpoint is responsible to erase the product stored in the “database”.
-
-Parameters
-Order id registered in the system.
-
-Responses
-OK! 200
-In case this response happens you will erase order in the “database”.
-
-Not Found 404
-In case the id of the product doesn't exist you will receive the error message Not Found with the error code 404.
-
-Response Example:
-
-Not Found
-
-PUT /order/:id
-This endpoint is responsible to edit a field of the order stored in the “database”.
-
-Parameters
-Order id registered in the system.
-
-Responses
-OK! 200
-In case this response happens, you will have edited some field of your stored order in the “database”.
-
-Response Example:
-
-
-{
-   	"cleaning": 0
+  "name": "hardware-repairing-store",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ace serve --watch",
+    "build": "node ace build --production",
+    "start": "ENV_SILENT=true node server.js",
+    "test": "node ace test",
+    "lint": "eslint . --ext=.ts",
+    "format": "prettier --write ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:adonis/typescriptApp",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "build"
+  ],
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "^5.9.5",
+    "@japa/preset-adonis": "^1.2.0",
+    "@japa/runner": "^2.5.1",
+    "@types/proxy-addr": "^2.0.0",
+    "@types/source-map-support": "^0.5.6",
+    "adonis-preset-ts": "^2.1.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-adonis": "^2.1.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "pino-pretty": "^10.0.1",
+    "prettier": "^3.0.0",
+    "typescript": "~4.6",
+    "youch": "^3.2.3",
+    "youch-terminal": "^2.2.2"
+  },
+  "dependencies": {
+    "@adonisjs/assembler": "^5.9.5",
+    "@adonisjs/auth": "^5.1.1",
+    "@adonisjs/core": "^5.8.0",
+    "@adonisjs/lucid": "^18.4.0",
+    "@adonisjs/repl": "^3.1.0",
+    "luxon": "^3.3.0",
+    "mysql2": "^3.5.0",
+    "proxy-addr": "^2.0.7",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.21"
+  }
 }
-
-Not Found 404
-In case the id of the product doesn't exist you will receive the error message Not Found with the error code 404.
-
-Response Example:
-
-Not Found
