@@ -1,22 +1,28 @@
 {
   "name": "KnexJS",
-  "version": "2.0.0",
-  "description": "trying the new way to create query builders with knex",
-  "main": "server.js",
+  "version": "2.0.1",
+  "description": "API rest using  express, bcrypt, consign, cors, dotenv, jsonwebtoken, moment, knex, passport, and mysql2",
+  "main": "sever.js",
+  "repository": "https://github.com/GlaudistonNeto/KnexJS",
   "author": "glaudistontheonly <glaudistonson@gmail.com>",
   "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "nodemon server.js"
   },
-  "repository_url": "https://github.com/GlaudistonNeto/KnexJS",
-  "private": false,
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
     "knex": "^2.5.1",
-    "mysql2": "^3.5.2"
+    "moment": "^2.29.4",
+    "mysql2": "^3.5.2",
+    "passport": "^0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
